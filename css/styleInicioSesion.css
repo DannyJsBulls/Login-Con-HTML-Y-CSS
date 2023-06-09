@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    box-sizing: border-box; /*Mantendra el modelo de caja*/
+}
+
+/* Elemento root para crear variables */
+:root {
+    --primer-color: #14ffec;
+    --segundo-color: #0d7377;
+    --tercer-color: #323232;
+    --cuarto-color: #212121;
+    --quinto-color: #007bff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h6 {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul, li, a, label, form, button{
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.input-box .details{
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+    background: var(--segundo-color);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: var(--segundo-color);
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.container {
+    max-width: 760px;
+    width: 100%;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    padding: 40px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    color: #000000;
+}
+
+.container form .user-details {
+    flex-wrap: wrap; /*Esta funcion hace que los label y los input se vean uno al lado del otro*/
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    margin-top: 30px;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px); /*Alineamos los campos, label y input*/
+    width: 100%;
+}
+
+/* Aca alineamos y ponemos el label arriba del input */
+.user-details .input-box .details {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: var(--segundo-color);
+}
+
+form .button input {
+    width: 100%;
+    margin-top: 40px;
+    height: 50px;
+    background: var(--segundo-color);
+    color: #ffffff;
+    margin-bottom: 10px;
+    border: transparent;
+    font-size: 18px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+form .button input:hover {
+    background: var(--quinto-color);
+    border: var(--quinto-color);
+}
+
+form .login p {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 36px;
+    margin-bottom: 22px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-weight: 600;
+    font-size: 15px !important;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+form .row input{
+    justify-content: start;
+    margin-right: 7px;
+}
+
+form .row p{
+    margin-left: 390px;
+    justify-content: space-around;
+}
+
+form .row a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--segundo-color);
+    font-size: 16px;
+}
+
+form .row a:hover{
+    color: var(--quinto-color);
+}
+
+form .login a {
+    text-decoration: none;
+    color: var(--segundo-color);
+}
+
+form .login a:hover{
+    color: var(--quinto-color) !important;
+}
+
+form .login a:hover {
+    color: #000;
+}
+
+#logo img {
+    width: 280px;
+    height: 120px;
+    margin-top: 60px;
+    padding: 0;
+}
+
+/* Estilos Phone (Celular) */
+@media screen and (min-width: 280px) and (max-width: 319px){
+    header{
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    header #logo img{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .container{
+        width: 85%;
+        max-width: 1000px;
+    }
+    .row{
+        display: block;
+        margin-bottom: 8px;
+    }
+    form .row p{
+        margin-left: 0;
+        display: block;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .row a{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 527px){
+    header{
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    header #logo img{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .container{
+        width: 85%;
+        max-width: 1000px;
+    }
+    .row{
+        display: block;
+        margin-bottom: 8px;
+    }
+    form .row p{
+        margin-left: 0;
+        display: block;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .row a{
+        margin-top: 10px;
+    }
+}
+
+/* Estilos Tablet */
+@media screen and (min-width: 527px) and (max-width: 768px){
+    header{
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    header #logo img{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .container{
+        width: 80%;
+        max-width: 1000px;
+    }
+    .row{
+        display: block;
+        margin-bottom: 8px;
+    }
+    form .row p{
+        margin-left: 0;
+        display: block;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .row a{
+        margin-top: 10px;
+    }
+}
+
+/* Estilos Ipad */
+@media screen and (min-width: 769px) and (max-width: 991px){
+    header{
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    header #logo img{
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .container{
+        width: 78%;
+        max-width: 1000px;
+    }
+    .row{
+        width: 100%;
+        max-width: 1000px;
+        display: block;
+    }
+    .row a{
+        font-size: 12px;
+        display: block;
+        position: relative;
+        text-align: right;
+        /* text-align: right; */
+        /* justify-content: flex-end; */
+    }
+}
+
+/* Estilos Escritorio */
+@media screen and (min-width: 992px) and (max-width: 1081px){
+    header{
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    header #logo img{
+        width: 47%;
+        height: auto;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .container{
+        width: 55%;
+        max-width: 1000px;
+    }
+    .row{
+        display: block;
+    }
+    .row a{
+        display: block;
+        text-align: right;
+        /* justify-content: flex-end; */
+    }
+}
+
+@media screen and (min-width: 1082px) and (max-width: 1200px){
+    header{
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    header #logo img{
+        width: 40% !important;
+        height: 50% !important;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .container{
+        width: 45%;
+        max-width: 1000px;
+    }
+    .row{
+        display: block;
+    }
+    .row a{
+        display: block;
+        text-align: right;
+        /* justify-content: flex-end; */
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px){
+    header{
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    header #logo img{
+        width: 35%;
+        height: 30% !important;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .container{
+        width: 48%;
+        max-width: 1000px;
+    }
+    .row{
+        display: block;
+    }
+    .row a{
+        display: block;
+        text-align: right;
+        /* justify-content: flex-end; */
+    }
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1600px){
+    header{
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    header #logo img{
+        width: 30%;
+        height: 30% !important;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .container{
+        width: 50%;
+        max-width: 1200px;
+    }
+    .row{
+        display: block;
+    }
+    .row a{
+        display: block;
+        text-align: right;
+        /* justify-content: flex-end; */
+    }
+}
